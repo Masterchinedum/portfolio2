@@ -1,0 +1,54 @@
+.ProjectCardDisplay {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    background-color: rgb(7, 5, 5);
+  }
+  
+  .slide-container {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .project-card {
+    flex: 0 0 300px;
+    margin-right: 20px;
+  }
+  
+  /* Add padding to the container holding the project cards */
+  .ProjectCardDisplay .slide-container {
+    padding-left: 40px;
+    padding-right: 40px;
+    /* Ensure the slide container takes full width */
+    width: 100%;
+    /* Center the project cards within the container */
+    justify-content: center;
+  }
+  
+  /* Show 4 cards per screen on large screens (>= 1200px) */
+  @media screen and (min-width: 1200px) {
+    .project-card {
+      flex: 0 0 calc(25% - 40px);
+    }
+  }
+  
+  /* Show 3 cards per screen on laptops (992px to 1199px) */
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    .project-card {
+      flex: 0 0 calc(33.33% - 40px);
+    }
+  }
+  
+  /* Show 2 cards per screen on tablets (768px to 991px) */
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .project-card {
+      flex: 0 0 calc(50% - 40px);
+    }
+  }
+  
+  /* Show 1 card per screen on mobile phones (<= 767px) */
+  @media screen and (max-width: 767px) {
+    .project-card {
+      flex: 0 0 calc(100% - 40px);
+    }
+  }

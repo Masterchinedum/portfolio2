@@ -1,0 +1,110 @@
+/* CSS for Project Card */
+.project-card {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex; /* To make child elements align horizontally */
+  flex-direction: column; /* Stack child elements vertically */
+  position: relative; /* Required for absolute positioning of view-project */
+}
+
+.project-card .project-image {
+  width: 100%;
+  padding-top: 100%; /* Creates a square with height equal to 100% of the width */
+  overflow: hidden;
+  position: relative;
+}
+
+.project-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.project-card .view-project {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: rgb(13, 173, 13);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear; /* Hide with fade effect */
+}
+
+.project-card .eye-icon {
+  margin-right: 8px;
+}
+
+.project-card:hover .view-project {
+  visibility: visible;
+  opacity: 1;
+}
+
+.project-card .project-details {
+  padding: 16px;
+}
+
+.project-card .year {
+  font-size: 14px;
+  color: #555;
+}
+
+.project-card .project-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px; /* Adjust the margin to create space between image and project name */
+}
+
+.project-card .new-badge {
+  background-color: black;
+  color: rgb(10, 28, 129);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* CSS for media queries */
+
+/* Show 4 cards per screen on large screens (>= 1200px) */
+@media screen and (min-width: 1200px) {
+  .project-card {
+    width: calc(25% - 40px);
+  }
+}
+
+/* Show 3 cards per screen on laptops (<= 1200px) */
+@media screen and (max-width: 1200px) {
+  .project-card {
+    width: calc(33.33% - 40px);
+  }
+}
+
+/* Show 2 cards per screen on tablets (<= 768px) */
+@media screen and (max-width: 768px) {
+  .project-card {
+    width: calc(50% - 40px);
+  }
+}
+
+/* Show 1 card per screen on mobile phones (<= 320px) */
+@media screen and (max-width: 320px) {
+  .project-card {
+    width: calc(100% - 40px);
+  }
+}

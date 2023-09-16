@@ -1,0 +1,145 @@
+/* Hero Container */
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(360deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+  padding: 4vw; /* Using vw units for padding to make it responsive */
+  padding-bottom: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Div */
+.left-div {
+  flex: 1;
+  padding-right: 4vw; /* Using vw units for padding to make it responsive */
+}
+
+/* Greeting Text */
+.greeting-text h1 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 2vw; /* Using vw units for font size to make it responsive */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+/* Profession Text */
+.profession-text {
+  margin-top: 2vw; /* Using vw units for margin to make it responsive */
+}
+
+.text-white h1 {
+  display: inline-block;
+  white-space: pre;
+  color: #000;
+  font-family: Poppins;
+  font-size: 3vw; /* Using vw units for font size to make it responsive */
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.text-white h1 span {
+  display: inline-block;
+  opacity: 0;
+}
+
+/* Animation */
+@keyframes typewriter {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.typewriter-text span {
+  animation: typewriter 4s steps(10, end) infinite;
+}
+
+/* Description Text */
+.description-text {
+  margin-top: 2vw; /* Using vw units for margin to make it responsive */
+  font-size: 1.8vw; /* Using vw units for font size to make it responsive */
+  color: #2D51EC;
+}
+
+/* Right Div */
+.right-div {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.background-image {
+  max-width: 90%;
+  height: auto;
+  margin-top: 5vw; /* Using vw units for margin to make it responsive */
+}
+
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    padding-top: 100px;
+  }
+
+  .left-div {
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .right-div {
+    padding-left: 0;
+  }
+
+  .background-image {
+    max-width: 80%;
+  }
+
+  .greeting-text h1 {
+    font-size: 15px;
+    text-align: left;
+  }
+
+  .profession-text {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .description-text {
+    font-size: 10px;
+  }
+}
+
+/* Light and Dark Mode */
+body {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+.dark-mode .hero-container {
+  background-color: #333;
+}
+
+.dark-mode .background-image {
+  background-color: #333;
+}
