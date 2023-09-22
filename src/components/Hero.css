@@ -11,6 +11,7 @@
 
 /* Left Div */
 .left-div {
+  
   flex: 1;
   padding-right: 4vw; /* Using vw units for padding to make it responsive */
 }
@@ -85,6 +86,7 @@
   max-width: 90%;
   height: auto;
   margin-top: 5vw; /* Using vw units for margin to make it responsive */
+  
 }
 
 

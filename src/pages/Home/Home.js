@@ -1,12 +1,14 @@
 import React, { useRef, useEffect } from 'react';
 import './Home.css';
 import Hero from '../../components/Hero';
+import ProfileCardSlides from '../../components/ProfileCardSlides';
 import Skills from '../../components/skills';
 import ProjectCard from '../../components/ProjectCard';
 import space1Image from '../../images/space1.png';
 import spaceImage from '../../images/space.jpeg';
 import space2Image from '../../images/space2.png';
 import space3Image from '../../images/space3.png';
+
 
 const Home = () => {
   const projects = [
@@ -74,6 +76,9 @@ const Home = () => {
       </div>
       <div>
         <Skills />
+      </div>
+      <div>
+        <ProfileCardSlides />
       </div>
       <div className="ProjectCardDisplay">
         <div className="slide-container" ref={slideRef}>
