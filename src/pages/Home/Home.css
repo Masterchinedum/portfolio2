@@ -1,11 +1,14 @@
 
   .Profile-card-container {
     display: flex;
+    /* to contain contents*/
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: rgb(7, 5, 5);
+    background-color: transparent;
     justify-content:space-between;
     padding: 40px 15px 40px 15px;
+    width: 100%;
   }
 
   .Profile-card-container .ProfileCard {
